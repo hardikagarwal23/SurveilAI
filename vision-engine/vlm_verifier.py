@@ -2,9 +2,13 @@ import os
 import json
 from google import genai
 from PIL import Image
+from dotenv import load_dotenv
 
-# Set up Gemini client
-API_KEY = os.environ.get("GEMINI_API_KEY", "ABC")
+# Load environment variables from a local .env file
+load_dotenv()
+
+# Set up Gemini client using the environment variable
+API_KEY = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=API_KEY)
 
 def verify_violation(image_path, violation_type):
