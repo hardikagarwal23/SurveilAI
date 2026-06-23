@@ -17,7 +17,9 @@ SurveilAI is a decentralized, edge-native traffic enforcement framework designed
 SurveilAI drops the video feed at the edge. It transmits strictly a **3KB JSON metadata payload** and a single highly-compressed ROI image crop to the Kafka Data Broker.
 
 ##
-*For the purpose of this hackathon's rapid feasibility prototype, the local vision engine was built using the YOLO11n architecture. This allowed for immediate, stable integration with our custom geometric tracking logic without the need to rewrite standard bounding-box pipelines over a 48-hour period.
+*Note:
+For the purpose of this hackathon's rapid feasibility prototype, the local vision engine was built using the YOLO11n architecture. This allowed for immediate, stable integration with our custom geometric tracking logic without the need to rewrite standard bounding-box pipelines over a 48-hour period.
+The rapid hackathon MVP utilizes a single-threshold coordinate baseline to validate end-to-end real-time network dispatch without local compute blocks.
 
 However, for the proposed city-wide deployment, the architecture will migrate to YOLO26. By leveraging YOLO26's native end-to-end NMS-free architecture, we expect to eliminate post-processing overhead and achieve up to 43% faster inference on CPU-bound edge devices, which is critical for scaling across municipal CCTV networks cost-effectively.
 
