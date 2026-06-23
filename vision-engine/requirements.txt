@@ -3,3 +3,4 @@ opencv-python==4.13.0.92
 google-genai==2.9.0
 pillow==12.2.0
 requests==2.34.2
+python-dotenv
